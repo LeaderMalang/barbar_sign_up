@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_barbar_sign_up_barbar_sign_up,barbar_sign_up.barbar_sign_up,model_barbar_sign_up_barbar_sign_up,base.group_user,1,1,1,1

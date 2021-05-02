@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="barbar_sign_up.list">
+      <field name="name">barbar_sign_up list</field>
+      <field name="model">barbar_sign_up.barbar_sign_up</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="barbar_sign_up.action_window">
+      <field name="name">barbar_sign_up window</field>
+      <field name="res_model">barbar_sign_up.barbar_sign_up</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="barbar_sign_up.action_server">
+      <field name="name">barbar_sign_up server</field>
+      <field name="model_id" ref="model_barbar_sign_up_barbar_sign_up"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="barbar_sign_up" id="barbar_sign_up.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="barbar_sign_up.menu_1" parent="barbar_sign_up.menu_root"/>
+    <menuitem name="Menu 2" id="barbar_sign_up.menu_2" parent="barbar_sign_up.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="barbar_sign_up.menu_1_list" parent="barbar_sign_up.menu_1"
+              action="barbar_sign_up.action_window"/>
+    <menuitem name="Server to list" id="barbar_sign_up" parent="barbar_sign_up.menu_2"
+              action="barbar_sign_up.action_server"/>
+-->
+  </data>
+</odoo>
