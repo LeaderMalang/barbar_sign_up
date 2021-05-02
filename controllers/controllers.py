@@ -14,7 +14,7 @@ _logger = logging.getLogger(__name__)
 class AuthSignupHome(AuthSignupHome):
     def do_signup(self, qcontext):
         """ Shared helper that creates a res.partner out of a token """
-        values = {key: qcontext.get(key) for key in ('login', 'name', 'password', 'phone', 'corporate_name', 'vat')}
+        values = {key: qcontext.get(key) for key in ('login', 'name', 'password', 'id_number', 'id_date','barber_name','license_number','cr_number','expiry_date', 'vat')}
         if not values:
             raise UserError(_("The form was not properly filled in."))
         if values.get('password') != qcontext.get('confirm_password'):
@@ -26,7 +26,7 @@ class AuthSignupHome(AuthSignupHome):
         self._signup_with_values(qcontext.get('token'), values)
         request.env.cr.commit()
 
-    @http.route('/web/signup', type='http', auth='public', website=True, sitemap=False)
+    @http.route('/web/signup', type='http',csrf=False, auth='public', website=True, sitemap=False)
     def web_auth_signup(self, *args, **kw):
         qcontext = self.get_auth_signup_qcontext()
         qcontext['states'] = request.env['res.country.state'].sudo().search([])
