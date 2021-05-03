@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="barbar_extend_partner_view">
+            <field name="name">partner.view.buttons</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                  <field name="id_number"/>
+                  <field name="id_date"/>
+                  <field name="license_number"/>
+                  <field name="cr_number"/>
+                  <field name="expiry_date"/>
+                </xpath>
+            </field>
+        </record>
+  </data>
+</odoo>
