@@ -3,7 +3,7 @@
     <data>
         <template id="auth_signup_barber_fields_extend" inherit_id="auth_signup.fields" name="Barber Signup Fields Extend">
             <xpath expr="//label[@for='name']" position="replace">
-                <label for="name">Your Name</label>
+                <label for="name">Name of Barber</label>
             </xpath>
             <xpath expr="//div[hasclass('field-confirm_password')]" position="after">
                 <div class="form-group field-id_number">
